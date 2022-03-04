@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TemperatureConversor.Services;
 
 namespace TemperatureConversor.Menus
 {
     class MenuTemperatura
     {
+        static TemperaturaServices temperaturaServices = new TemperaturaServices();
         public void TemperatureMenu()
         {
             Console.Clear();
@@ -20,9 +22,16 @@ namespace TemperatureConversor.Menus
             Console.WriteLine("");
 
             Console.Write("Converter de: ");
-            var De = Console.ReadLine();
+            var de = Console.ReadLine();
             Console.Write("Para: ");
-            var Para = Console.ReadLine();
+            var para = Console.ReadLine();
+            Console.WriteLine();
+            Console.Write("Digite o valor a se converter: ");
+
+            var valorAconverter = double.Parse(Console.ReadLine());
+
+            double resultadoConvertido = temperaturaServices.ConversorTemperatura(de, para, valorAconverter);
+            Console.WriteLine($"{valorAconverter}° {de} é igual a {resultadoConvertido}° {para}");
         }
     }
 }
