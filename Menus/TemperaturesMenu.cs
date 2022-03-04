@@ -23,6 +23,8 @@ namespace TemperatureConversor.Menus
             var De = Console.ReadLine();
             Console.Write("Para: ");
             var Para = Console.ReadLine();
+
+
         }
     }
 }
