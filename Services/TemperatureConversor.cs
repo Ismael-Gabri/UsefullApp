@@ -8,7 +8,7 @@ namespace TemperatureConversor.Services
 {
     class TemperaturaServices
     {
-       public double ConversorTemperatura(string de, string para)
+       public double ConversorTemperatura(string de, string para, double valorAconverter)
         {
             if (de == "Celsius" && para == "Fahrenheit")
             {
