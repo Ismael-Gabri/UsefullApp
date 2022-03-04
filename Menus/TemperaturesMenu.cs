@@ -4,11 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TemperatureConversor.Services;
+using AplicationStart;
+using static AplicationStart.MenuPrincipal;
 
 namespace TemperatureConversor.Menus
 {
     class MenuTemperatura
     {
+        static MainMenu menuPrincipal = new MainMenu();
         static TemperaturaServices temperaturaServices = new TemperaturaServices();
         public void TemperatureMenu()
         {
@@ -31,7 +34,17 @@ namespace TemperatureConversor.Menus
             var valorAconverter = double.Parse(Console.ReadLine());
 
             double resultadoConvertido = temperaturaServices.ConversorTemperatura(de, para, valorAconverter);
+            Console.WriteLine();
             Console.WriteLine($"{valorAconverter}° {de} é igual a {resultadoConvertido}° {para}");
+
+            Console.WriteLine();
+            Console.WriteLine("Retornar ao menu principal? (y/n)");
+            var resposta = Console.ReadLine();
+
+            if (resposta == "n" || resposta == "N")
+                TemperatureMenu();
+            else if (resposta == "y" || resposta == "Y")
+                menuPrincipal.MainMenuCall();
         }
     }
 }

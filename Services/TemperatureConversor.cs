@@ -4,50 +4,56 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Solucinar o maiusculo
+//solucionar o problema da resposta inválida
+
 namespace TemperatureConversor.Services
 {
     class TemperaturaServices
     {
        public double ConversorTemperatura(string de, string para, double valorAconverter)
         {
-            if (de == "Celsius" && para == "Fahrenheit")
+            //Solucinar o maiusculo
+            double resultadoConvertido = 0;
+
+            if (de == "celcius" && para == "fahrenheit")
             {
-
+                resultadoConvertido = valorAconverter * 1.8 + 32;
             }
-            if (de == "Celsius" && para == "Kelvin")
+            if (de == "celcius" && para == "kelvin")
             {
-
+                resultadoConvertido = valorAconverter + 273.15;
             }
-            if (de == "Celsius" && para == "Celsius")
+            if (de == "celcius" && para == "celcius")
             {
-
+                resultadoConvertido = valorAconverter;
             }
-            if (de == "Fahrenheit" && para == "Celsius")
+            if (de == "fahrenheit" && para == "celcius")
             {
-
+                resultadoConvertido = (valorAconverter - 32) * 5 / 9;
             }
-            if (de == "Fahrenheit" && para == "Kelvin")
+            if (de == "fahrenheit" && para == "kelvin")
             {
-
+                resultadoConvertido = (valorAconverter - 32) * 5 / 9 + 273.15;
             }
-            if (de == "Fahrenheit" && para == "Fahrenheit")
+            if (de == "fahrenheit" && para == "fahrenheit")
             {
-
+                resultadoConvertido = valorAconverter;
             }
-            if (de == "Kelvin" && para == "Celsius")
+            if (de == "kelvin" && para == "celcius")
             {
-
+                resultadoConvertido = valorAconverter - 273.15;
             }
-            if (de == "Kelvin" && para == "Fahrenheit")
+            if (de == "kelvin" && para == "fahrenheit")
             {
-
+                resultadoConvertido = (valorAconverter - 273.15) * 9 / 5 + 32;
             }
-            if (de == "Kelvin" && para == "Kelvin")
+            if (de == "kelvin" && para == "kelvin")
             {
-
+                resultadoConvertido = valorAconverter;
             }
 
-            return 1;
+            return resultadoConvertido;
         }
     }
 }
