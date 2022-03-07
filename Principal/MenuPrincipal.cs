@@ -44,19 +44,41 @@ namespace AplicationStart
                 Console.WriteLine(" ");
 
                 Console.Write("Resposta: ");
-                int resposta = int.Parse(Console.ReadLine());
+                var resposta = Console.ReadLine();
 
-                switch (resposta)
+                bool ehInt = int.TryParse(resposta, out int respostaParse);
+
+                if (ehInt)
                 {
-                    case 1:
-                        menuCalculadora.MenuCalculadora();
-                        break;
-                    case 2:
-                        menuTemperatura.TemperatureMenu();
-                        break;
-                    case 3:
-                        Environment.Exit(0);
-                        break;
+                    switch (respostaParse)
+                    {
+                        case 1:
+                            menuCalculadora.MenuCalculadora();
+                            break;
+                        case 2:
+                            menuTemperatura.TemperatureMenu();
+                            break;
+                        case 3:
+                            Environment.Exit(0);
+                            break;
+                        default:
+                            Console.WriteLine(" ");
+                            Console.WriteLine("Digite uma opção válida");
+                            Console.WriteLine(" ");
+                            Console.WriteLine("Retornando ao menu principal...");
+                            System.Threading.Thread.Sleep(7000);
+                            MainMenuCall();
+                            break;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine(" ");
+                    Console.WriteLine($"Atenção: Digite apenas números. Sua resposta foi: {resposta}");
+                    Console.WriteLine(" ");
+                    Console.WriteLine("Retornando ao menu principal...");
+                    System.Threading.Thread.Sleep(7000);
+                    MainMenuCall();
                 }
             }
         }

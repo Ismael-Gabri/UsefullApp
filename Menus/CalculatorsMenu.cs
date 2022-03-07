@@ -7,6 +7,7 @@ using CalculadoraFinal.Services;
 using AplicationStart;
 using static AplicationStart.MenuPrincipal;
 
+//resolver o mesmo problema do menu, colocar uma opcao inexistente ou uma letra
 namespace CalculadoraFinal.Menus
 {
     public class CalculatorsMenu

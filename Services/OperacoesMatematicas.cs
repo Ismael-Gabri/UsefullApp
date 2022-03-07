@@ -77,13 +77,13 @@ namespace CalculadoraFinal.Services
 
                     Console.WriteLine(" ");
 
-                    RealizarSomaPrintarResultado();
+                    RealizarSubtracaoPrintarResultado();
                 }
             }
             else
             {
                 Console.Write("Digite um número válido\n");
-                RealizarSomaPrintarResultado();
+                RealizarSubtracaoPrintarResultado();
             }
 
             return result;
@@ -115,13 +115,13 @@ namespace CalculadoraFinal.Services
 
                     Console.WriteLine(" ");
 
-                    RealizarSomaPrintarResultado();
+                    RealizarMultiplicacaoPrintarResultado();
                 }
             }
             else
             {
                 Console.Write("Digite um número válido\n");
-                RealizarSomaPrintarResultado();
+                RealizarMultiplicacaoPrintarResultado();
             }
 
             return result;
@@ -153,13 +153,13 @@ namespace CalculadoraFinal.Services
 
                     Console.WriteLine(" ");
 
-                    RealizarSomaPrintarResultado();
+                    RealizarDivisaoPrintarResultado();
                 }
             }
             else
             {
                 Console.Write("Digite um número válido\n");
-                RealizarSomaPrintarResultado();
+                RealizarDivisaoPrintarResultado();
             }
 
             return result;
