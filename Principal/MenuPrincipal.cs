@@ -74,10 +74,10 @@ namespace AplicationStart
                 else
                 {
                     Console.WriteLine(" ");
-                    Console.WriteLine($"Atenção: Digite apenas números. Sua resposta foi: {resposta}");
+                    Console.WriteLine($"Atenção: Digite apenas números.");
                     Console.WriteLine(" ");
                     Console.WriteLine("Retornando ao menu principal...");
-                    System.Threading.Thread.Sleep(7000);
+                    System.Threading.Thread.Sleep(6000);
                     MainMenuCall();
                 }
             }

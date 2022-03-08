@@ -30,34 +30,54 @@ namespace CalculadoraFinal.Menus
             Console.WriteLine("[3] Multiplicacao");
             Console.WriteLine("[4] Divisao");
             Console.WriteLine("");
-            Console.WriteLine("[5] Sair para o menu principal"); //N funciona ainda
+            Console.WriteLine("[5] Sair para o menu principal");
             Console.WriteLine("[6] Sair");
             Console.WriteLine("");
             Console.Write("Opcao: ");
-            var respostaOperacao = Double.Parse(Console.ReadLine());
+            bool ehInt = int.TryParse(Console.ReadLine(), out var x);
 
-            switch (respostaOperacao)
+            if(ehInt == true)
             {
-                case 1:
-                    operacoesMatematematicas.RealizarSomaPrintarResultado();
-                    break;
-                case 2:
-                    operacoesMatematematicas.RealizarSubtracaoPrintarResultado();
-                    break;
-                case 3:
-                    operacoesMatematematicas.RealizarMultiplicacaoPrintarResultado();
-                    break;
-                case 4:
-                    operacoesMatematematicas.RealizarDivisaoPrintarResultado();
-                    break;
-                case 5:
-                    mainMenuCall.MainMenuCall();
-                    break;
-                case 6:
-                    Environment.Exit(0);
-                    break;
+                switch (x)
+                {
+                    case 1:
+                        operacoesMatematematicas.RealizarSomaPrintarResultado();
+                        break;
+                    case 2:
+                        operacoesMatematematicas.RealizarSubtracaoPrintarResultado();
+                        break;
+                    case 3:
+                        operacoesMatematematicas.RealizarMultiplicacaoPrintarResultado();
+                        break;
+                    case 4:
+                        operacoesMatematematicas.RealizarDivisaoPrintarResultado();
+                        break;
+                    case 5:
+                        mainMenuCall.MainMenuCall();
+                        break;
+                    case 6:
+                        Environment.Exit(0);
+                        break;
+                    default:
+                        Console.WriteLine(" ");
+                        Console.WriteLine("Essa opcao nao está disponível");
+                        Console.WriteLine(" ");
+                        Console.WriteLine("Retornando ao menu...");
+                        System.Threading.Thread.Sleep(7000);
+                        MenuCalculadora();
+                        break;
+                }
+                Console.ReadLine();
             }
-            Console.ReadLine();
+            else
+            {
+                Console.WriteLine(" ");
+                Console.WriteLine($"Atenção: Digite apenas números.");
+                Console.WriteLine(" ");
+                Console.WriteLine("Retornando ao menu...");
+                System.Threading.Thread.Sleep(7000);
+                MenuCalculadora();
+            }
         }
     }
 }
