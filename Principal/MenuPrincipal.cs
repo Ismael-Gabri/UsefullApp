@@ -10,7 +10,8 @@ namespace AplicationStart
     //Fazer a parte da Calculadora (CHECK)
     //Fazer o menu principal (CHECK)
     //Fazer uma parte para Calculo de celcius, Fareheints... (CHECK)
-    //Fazer uma parte para converter Cm, M... TODO
+    //Fazer uma parte para converter Cm, M... (TODO)
+    //Chamar o Menu da calculadora novamente após fazer a conta (BUG)
     public class MenuPrincipal
     {
         static MainMenu mainMenuCall = new MainMenu();
