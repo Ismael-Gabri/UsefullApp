@@ -25,9 +25,9 @@ namespace TemperatureConversor.Menus
             Console.WriteLine("");
 
             Console.Write("Converter de: ");
-            var de = Console.ReadLine();
+            string de = Console.ReadLine();
             Console.Write("Para: ");
-            var para = Console.ReadLine();
+            string para = Console.ReadLine();
             Console.WriteLine();
             Console.Write("Digite o valor a se converter: ");
 

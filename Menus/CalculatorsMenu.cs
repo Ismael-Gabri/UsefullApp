@@ -7,7 +7,14 @@ using CalculadoraFinal.Services;
 using AplicationStart;
 using static AplicationStart.MenuPrincipal;
 
-//resolver o mesmo problema do menu, colocar uma opcao inexistente ou uma letra
+//resolver o problema da resposta inválida para o menu temperatura;
+//trocar de branch;
+//Fazer conversor de centimetros, metros, mm;
+//trocar de branch;
+//montar interface de opcoes para o menu temperatura mostrando as opcoes disponíveis;
+//trocar de branch
+//montar uma interface colorida e mais agradável (Ver na NET como faz)
+
 namespace CalculadoraFinal.Menus
 {
     public class CalculatorsMenu

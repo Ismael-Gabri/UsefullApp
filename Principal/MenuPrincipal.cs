@@ -9,7 +9,7 @@ namespace AplicationStart
     //arrumar uma solucao para podermos lidar com decimais (CHECK)
     //Fazer a parte da Calculadora (CHECK)
     //Fazer o menu principal (CHECK)
-    //Fazer uma parte para Calculo de celcius, Fareheints... (DOING)
+    //Fazer uma parte para Calculo de celcius, Fareheints... (CHECK)
     //Fazer uma parte para converter Cm, M... TODO
     public class MenuPrincipal
     {
