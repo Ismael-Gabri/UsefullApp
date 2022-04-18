@@ -5,11 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using CalculadoraFinal.Interfaces;
 using AplicationStart;
+using CalculadoraFinal.Menus;
 
 namespace CalculadoraFinal.Services 
 {
     //Arrumar uma solucao para se caso o usuario nao digitar um numero (CHECK)
     //arrumar uma solucao para podermos lidar com decimais (CHECK)
+
     internal class OperacoesMatematicas : IOperacoesMatematicas
     {
         public double RealizarSomaPrintarResultado()
@@ -77,13 +79,13 @@ namespace CalculadoraFinal.Services
 
                     Console.WriteLine(" ");
 
-                    RealizarSomaPrintarResultado();
+                    RealizarSubtracaoPrintarResultado();         
                 }
             }
             else
             {
                 Console.Write("Digite um número válido\n");
-                RealizarSomaPrintarResultado();
+                RealizarSubtracaoPrintarResultado();
             }
 
             return result;
@@ -115,13 +117,13 @@ namespace CalculadoraFinal.Services
 
                     Console.WriteLine(" ");
 
-                    RealizarSomaPrintarResultado();
+                    RealizarMultiplicacaoPrintarResultado();
                 }
             }
             else
             {
                 Console.Write("Digite um número válido\n");
-                RealizarSomaPrintarResultado();
+                RealizarMultiplicacaoPrintarResultado();
             }
 
             return result;
@@ -153,13 +155,13 @@ namespace CalculadoraFinal.Services
 
                     Console.WriteLine(" ");
 
-                    RealizarSomaPrintarResultado();
+                    RealizarDivisaoPrintarResultado();
                 }
             }
             else
             {
                 Console.Write("Digite um número válido\n");
-                RealizarSomaPrintarResultado();
+                RealizarDivisaoPrintarResultado();
             }
 
             return result;

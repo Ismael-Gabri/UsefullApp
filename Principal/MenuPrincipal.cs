@@ -16,6 +16,7 @@ namespace AplicationStart
         static MainMenu mainMenuCall = new MainMenu();
         static CalculatorsMenu menuCalculadora = new CalculatorsMenu();
         static MenuTemperatura menuTemperatura = new MenuTemperatura();
+        static UserProfile userProfile = new UserProfile();
         static void Main(string[] args)
         {
             mainMenuCall.MainMenuCall();
@@ -36,10 +37,10 @@ namespace AplicationStart
 
                 Console.WriteLine("[1] Calculadora");
                 Console.WriteLine("[2] Conversor de temperatura");
-
-                Console.WriteLine();
-
-                Console.WriteLine("[3] Sair do App");
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("[3] Perfil");
+                Console.WriteLine("[4] Sair do App");
 
                 Console.WriteLine(" ");
 
@@ -55,6 +56,9 @@ namespace AplicationStart
                         menuTemperatura.TemperatureMenu();
                         break;
                     case 3:
+                        userProfile.UserMenu();
+                        break;
+                    case 4:
                         Environment.Exit(0);
                         break;
                 }
