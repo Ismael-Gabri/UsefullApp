@@ -5,12 +5,8 @@ using TemperatureConversor.Menus;
 
 namespace AplicationStart
 {
-    //Arrumar uma solucao para se caso o usuario nao digitar um numero (CHECK)
-    //arrumar uma solucao para podermos lidar com decimais (CHECK)
-    //Fazer a parte da Calculadora (CHECK)
-    //Fazer o menu principal (CHECK)
-    //Fazer uma parte para Calculo de celcius, Fareheints... (DOING)
     //Fazer uma parte para converter Cm, M... TODO
+
     public class MenuPrincipal
     {
         static MainMenu mainMenuCall = new MainMenu();
@@ -45,22 +41,37 @@ namespace AplicationStart
                 Console.WriteLine(" ");
 
                 Console.Write("Resposta: ");
-                int resposta = int.Parse(Console.ReadLine());
-
-                switch (resposta)
+                int resposta;
+                if (int.TryParse(Console.ReadLine(), out resposta))
                 {
-                    case 1:
-                        menuCalculadora.MenuCalculadora();
-                        break;
-                    case 2:
-                        menuTemperatura.TemperatureMenu();
-                        break;
-                    case 3:
-                        userProfile.UserMenu();
-                        break;
-                    case 4:
-                        Environment.Exit(0);
-                        break;
+                    switch (resposta)
+                    {
+                        case 1:
+                            menuCalculadora.MenuCalculadora();
+                            break;
+                        case 2:
+                            menuTemperatura.TemperatureMenu();
+                            break;
+                        case 3:
+                            userProfile.UserMenu();
+                            break;
+                        case 4:
+                            Environment.Exit(0);
+                            break;
+                        default:
+                            Console.WriteLine();
+                            Console.WriteLine("[!] Digite uma opcao válida [!]");
+                            System.Threading.Thread.Sleep(3000);
+                            MainMenuCall();
+                            break;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("[!] Digite uma opcao válida [!]");
+                    System.Threading.Thread.Sleep(3000);
+                    MainMenuCall();
                 }
             }
         }

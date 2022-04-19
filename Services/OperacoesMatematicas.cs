@@ -7,11 +7,10 @@ using CalculadoraFinal.Interfaces;
 using AplicationStart;
 using CalculadoraFinal.Menus;
 
-namespace CalculadoraFinal.Services 
+namespace CalculadoraFinal.Services
 {
     //Arrumar uma solucao para se caso o usuario nao digitar um numero (CHECK)
     //arrumar uma solucao para podermos lidar com decimais (CHECK)
-
     internal class OperacoesMatematicas : IOperacoesMatematicas
     {
         public double RealizarSomaPrintarResultado()
@@ -160,7 +159,10 @@ namespace CalculadoraFinal.Services
             }
             else
             {
-                Console.Write("Digite um número válido\n");
+                Console.WriteLine(" _________________________");
+                Console.WriteLine("|                         |");
+                Console.WriteLine("| Digite um número válido |");
+                Console.WriteLine("|_________________________|");
                 RealizarDivisaoPrintarResultado();
             }
 
